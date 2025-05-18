@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h1>{{ city }}</h1>
+<h2>{{ temp }}</h2>
+<div style="display: flex;">
+    <form action="{% url 'temp_somewhere' %}">
+        <input style="background: blue" type="submit" value="Check other cities">
+    </form>
+    &nbsp;
+    <form action="{% url 'temp_here' %}">
+        <input style="background: red" type="submit" value="Home">
+    </form>
+</div>
+</body>
+</html>
